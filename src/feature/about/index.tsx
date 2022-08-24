@@ -5,7 +5,7 @@ function About() {
     <Container maxWidth="xl">
       <Grid container>
         <Box mt="40px">
-          <Typography variant="h2">Hello Finn, </Typography>
+          <Typography variant="h2">Hello, </Typography>
           <br />
           <Typography variant="h5">
             You can search list by artist, genre, or album name. <br />

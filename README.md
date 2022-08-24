@@ -1,4 +1,4 @@
-# Hello Finn
+# Hello
 
 ## Tech stack
 React, Typescript, Material Ui, CRA

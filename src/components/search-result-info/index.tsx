@@ -3,14 +3,12 @@ import Loader from '../loader';
 import { SearchResultInfoProps } from './types';
 
 function SearchResultInfo({ resultsLength, isDataLoaded }: SearchResultInfoProps) {
-  if (isDataLoaded) {
-    return (
-      <div>
-        {resultsLength > 0 ? <>Found: {resultsLength}</> : <>No albums found</>}
-      </div>
-    );
+  if (!isDataLoaded) {
+    return <Loader />;
   }
-  return <Loader />;
+  return (
+    <div>{resultsLength > 0 ? `Found: ${resultsLength}` : `No albums found`}</div>
+  );
 }
 
 export default SearchResultInfo;

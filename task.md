@@ -4,7 +4,7 @@ finn GmbH is branching into the music business and needs a new website. Build it
 
 ### Brief
 
-In a fictional world, finn GmbH is branching into the music business and we need a new a website. This website needs to display the top 100 songs based on the iTunes API. This code challenge allows you to choose your own path and lets you flaunt your creative panache and technical skills along the way.
+In a fictional world, xxxxxxx is branching into the music business and we need a new a website. This website needs to display the top 100 songs based on the iTunes API. This code challenge allows you to choose your own path and lets you flaunt your creative panache and technical skills along the way.
 
 ### Tasks
 

@@ -10,20 +10,20 @@ import { lighten } from 'polished';
 import { AlbumWrapperProps } from './types';
 
 export interface StyledIconButtonProps extends IconButtonProps {
-  favorite?: boolean;
+  favorite: number;
 }
 
 const StyledIconButton = styled(IconButton)<StyledIconButtonProps>`
   position: relative;
   float: right;
   transition: all 0.4s ease-in;
-  border: ${(props) => (props.favorite ? '1px solid red' : '1px solid #7FBAF5')};
-  color: ${(props) => (props.favorite ? 'red' : 'white')};
-  background: ${(props) => (props.favorite ? 'white' : '#7FBAF5')};
+  border: ${(props) => (props.favorite === 0 ? '1px solid #7FBAF5' : '1px solid red')};
+  color: ${(props) => (props.favorite === 0 ? 'white' : 'red')};
+  background: ${(props) => (props.favorite === 0 ? '#7FBAF5' : 'white')};
   &: hover {
     transition: all 0.2s ease-in;
     background: ${(props) =>
-      props.favorite ? lighten(0.3, 'red') : lighten(0.2, '#7FBAF5')};
+      props.favorite === 0 ? lighten(0.2, '#7FBAF5') : lighten(0.3, 'red')};
   }
 `;
 
@@ -38,6 +38,7 @@ function Album({ album, handleSearch }: AlbumWrapperProps) {
   //     attributes: { 'im:id': ALBUM_ID },
   //   },
   // } = album;
+
 
   React.useEffect(() => {
     const keyExist = localStorage.getItem(ALBUM_ID);
@@ -107,7 +108,7 @@ function Album({ album, handleSearch }: AlbumWrapperProps) {
               <StyledIconButton
                 aria-label="add to favorites"
                 onClick={handleChangeFavorite}
-                favorite={isFavorite}
+                favorite={isFavorite ? 1 : 0}
               >
                 <FavoriteIcon />
               </StyledIconButton>

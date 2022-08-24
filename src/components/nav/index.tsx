@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 
 import { Link } from 'react-router-dom';
 import { List, ListItem, ListItemText } from '@mui/material';
-import logo from '../../assets/finn_logo.svg';
+import logo from '../../assets/logo_random.svg';
 
 function Nav() {
   return (
@@ -13,7 +13,7 @@ function Nav() {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Link to="/">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} height="65px" width="auto" alt="logo" />
           </Link>
           <List>
             <ListItem>
