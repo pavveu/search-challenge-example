@@ -13,7 +13,7 @@ function Nav() {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Link to="/">
-            <img src={logo} height="65px" width="auto" alt="logo" />
+            <img src={logo} height="85px" width="200px" alt="logo" />
           </Link>
           <List>
             <ListItem>
